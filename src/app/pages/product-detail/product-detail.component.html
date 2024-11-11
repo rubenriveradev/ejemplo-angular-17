@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="center">
+
+@if(loading){
+    <h5 style="color: blu;">loading</h5>
+}
+@if(!loading) {
+    <div class="card" style="width: 40rem;">
+        <img class="card-img-top" src="{{producto?.image}}" alt="Card image cap">
+        <div class="card-body">      
+          <ng-container *ngIf="!loading">
+            <h3>Id:{{ producto?.id }}</h3>
+            <h4>Nombre:</h4><label style="font-size: 1.2rem;">{{ producto?.title }}</label> 
+            <h3 [ngStyle]="{ color: color }">Precio:{{ producto?.price | currency }} </h3>
+            <h2>Descripción</h2>
+            <p *ngIf="producto?.description">descripcion:{{ producto?.description }}</p>
+          </ng-container>
+        
+          <ng-container *ngIf="loading">
+            <i style="color: blue">Cargando detalle de producto...</i>
+          </ng-container>
+        </div>
+        </div>
+}
+</div>
+</div>

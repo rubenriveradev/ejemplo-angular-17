@@ -1,0 +1,15 @@
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: grid;
+    justify-items: center;
+}
+
+img{
+    width: 85%;
+    height: 85%;
+    object-fit: cover;
+}
